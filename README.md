@@ -70,11 +70,5 @@ The movie list seeds sample records into MongoDB the first time `GET /api/movies
 7. Cancel the demo booking and verify it disappears from the list.
 8. Test API health and authentication endpoints in Postman.
 
-## Deploying
-- Frontend: deploy the `client` folder as a Vite app on a static hosting provider; build command `npm run build`, output folder `dist`.
-- Backend: deploy the `server` folder to a Node.js hosting provider; start command `npm start`.
-- Set backend environment variables (`MONGODB_URI`, `JWT_SECRET`, `CLIENT_URL`) on the hosting provider. Set frontend `VITE_API_URL` to the deployed backend's `/api` URL and rebuild.
-- Use MongoDB Atlas for a deployed app. Configure CORS to the exact deployed frontend origin.
-
 ## Notes / limitations
 This is a learning/demo project. Booking seat checks are validated by the API, but production-grade simultaneous booking requires stronger database-level uniqueness/transaction handling and an appropriate MongoDB replica-set deployment. Payments, email delivery and admin management are not implemented.
